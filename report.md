@@ -1,4 +1,4 @@
-# INDIVIDUAL PROJECT
+# Individual Project - BreadShop
 
 ## key Features
 
@@ -15,9 +15,9 @@
 
 # Core code and Explanation
 
-1.  Menu Data Structure
+### 1.  Menu Data Structure
 
-    ```
+    
     const menuItem = [
         {
             id: 1,
@@ -29,13 +29,13 @@
         },
         // ... more items
     ]
-    ```
+
+#### Purpose
 -   Stores all menu items with their properties
 -   Used as the single source of truth for the application
 
-2.  Displaying Menu Items
+### 2.  Displaying Menu Items
 
-    ```
         function displayMenuItems(items) {
         const menuContainer = document.getElementById('menu-container');
         menuContainer.innerHTML = '';
@@ -59,14 +59,14 @@
             menuContainer.appendChild(menuItem);    
         });
     }
-    ```
+
+#### Functionality
 -   Dynamically creates menu items from the data
 -   Uses template literals for clean HTML generation
 -   Includes "Add to Cart" button with item ID binding
 
-3.  Cart Management
+### 3.  Cart Management
     
-    ```
         function addToCart(itemid) {
         const item = menuItems.find(item => item.id === itemid);
         const existingItemIndex = cart.findIndex(cartItem => cartItem.id === itemid);
@@ -83,14 +83,14 @@
         }
         updateOrderSummary();
     }
-    ```
+
+#### Features
 -   Handles adding items to cart
 -   Checks for existing items to increment quantity
 -   Updates the order summary after modification
 
-4.  Filtering Functionality
+### 4.  Filtering Functionality
 
-    ```
             function filterItems(category) {
         let filterItems;
         if (category.toLowerCase() === 'all') {
@@ -102,14 +102,14 @@
         }
         displayMenuItems(filterItems);
     }
-    ```
+
+#### Behavior
 -   Filters menu items by category
 -   Handles "All" category case
 -   Updates the displayed items
 
-5.  Checkout Process
+### 5.  Checkout Process
 
-    ```
         document.getElementById('checkout-btn').addEventListener('click', () => {
         if (cart.length > 0) {
             Swal.fire({
@@ -127,7 +127,8 @@
             });
         }
     });
-    ```
+
+#### Process
 -   Shows success/error message using [SweetAlert](https://sweetalert2.github.io/)
 -   Clears cart on successful checkout
 -   Prevents checkout with empty cart
@@ -135,6 +136,7 @@
 ## Conclusion
 
 -  the website can be access [here](https://mal49.github.io/BreadShop/)
+-  GitHub repository [here](https://github.com/mal49/BreadShop)
 
 ## Full code snippet
 
