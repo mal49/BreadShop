@@ -134,10 +134,7 @@
 
 ## Conclusion
 
--   Dynamic content rendering from JavaScript data
--   Interactive cart management
--   Clean UI 
--   Effective use of event handling
+-  the website can be access [here](https://mal49.github.io/BreadShop/)
 
 ## Full code snippet
 
